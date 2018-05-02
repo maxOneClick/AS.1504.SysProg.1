@@ -1,0 +1,9 @@
+  №                     Имя   Энергия    Убийства    Шаги    Очки   Баллы
+
+  1            BaseRobot(4)         0           0     740       0      15
+  2            BaseRobot(1)         0           0     712       0      11
+  3            BaseRobot(2)         0           0     712       0      11
+  4            BaseRobot(6)         0           0     709       0      11
+  5            BaseRobot(7)         0           0     652       0      11
+  6            BaseRobot(5)         0           0     608       0      11
+  7            BaseRobot(3)         0           0     496       0       9
