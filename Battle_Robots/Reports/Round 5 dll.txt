@@ -1,0 +1,3 @@
+BaseRobot.dll BaseRobot 6
+01.dll robot1 3
+02.dll robot2 4
