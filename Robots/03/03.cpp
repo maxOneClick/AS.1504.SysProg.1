@@ -104,3 +104,4 @@ void DoStep(Stepinfo* si)
 		si->curActions.Y = si->robot.Y + dy;
 	}
 }
+
