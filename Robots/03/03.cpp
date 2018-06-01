@@ -62,7 +62,7 @@ void DoStep(Stepinfo* si)
 
 	for (auto it = si->robots.begin(); it != si->robots.end(); ++it)
 	{
-		if (it->second.fname != "9_Robot.dll")
+		if (it->second.fname != "03.dll")
 		{
 			distance = sqrt(pow(it->second.X - si->robot.X, 2) + pow(it->second.Y - si->robot.Y, 2));
 			if (min > distance && si->robots[it->first].E > 0)
