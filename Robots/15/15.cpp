@@ -95,7 +95,7 @@ void DoStep(Stepinfo* si)
 
 	for (auto r = si->robots.begin(); r != si->robots.end(); ++r)
 	{
-		if (r->second.fname != "15.dll")
+		if (r->second.fname != "15.dll" && r->second.fname != "09.dll" && r->second.fname != "10.dll")
 		{
 			path = sqrt(pow(r->second.X - si->robot.X, 2) + pow(r->second.Y - si->robot.Y, 2));
 			if (path != 0 && r->second.E != 0)
