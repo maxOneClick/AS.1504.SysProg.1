@@ -6,7 +6,11 @@
 
 #include "../../Battle_Robots/Options.h"
 
+void StartPosSearch(Stepinfo* si, double &limit);
+void PosDefend(Stepinfo* si, double& limit);
+
 extern "C" {
+
 	API void DoStep(Stepinfo*);
 }
 
