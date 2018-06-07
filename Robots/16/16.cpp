@@ -3,10 +3,6 @@
 
 #include "stdafx.h"
 #include "16.h"
-#include <ctime>
-#include <cstdlib>
-#include <math.h>
-#include <ctime>
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -15,12 +11,6 @@ using namespace std;
 
 void DoStep(Stepinfo* si)
 {
-  Robot my;
-	for (auto it = si->robots.begin(); it != si->robots.end(); ++it)
-	{
-		if (it->second.fname == "16.dll")
-			my = it->second;
-	}
 	int StartPointX = 0.5*si->settings.W;
 	int	StartPointY = 0.5*si->settings.H;
 	int BasePoint = 0;
@@ -41,11 +31,12 @@ void DoStep(Stepinfo* si)
 
 			for (auto it = si->robots.begin(); it != si->robots.end(); ++it)
 			{
-				
-					int dEnemy = sqrt(pow(si->chargePoints[i].X - it->second.X, 2) + pow(si->chargePoints[i].Y - it->second.Y, 2));
 
-					if (dEnemy <= 2 * min)
-						alert = true;
+				int dEnemy = sqrt(pow(si->chargePoints[i].X - it->second.X, 2) + pow(si->chargePoints[i].Y - it->second.Y, 2));
+
+				if (dEnemy <= 2 * min)
+					alert = true;
+
 
 			}
 
@@ -108,7 +99,9 @@ void DoStep(Stepinfo* si)
 				int distanceEnemyToBase = sqrt(pow(si->chargePoints[BasePoint].X - it->second.X, 2) + pow(si->chargePoints[BasePoint].Y - it->second.Y, 2));
 				bool en = true;
 
-				if (my.name == it->first || si->robot.name == it->first)
+			
+				if (it->second.fname == "16.dll" || it->second.fname == "14.dll" || it->second.fname == "01.dll" &&
+					it->second.fname == "07.dll" || si->robot.name == it->first)
 				{
 					en = false;
 					break;
@@ -158,7 +151,10 @@ void DoStep(Stepinfo* si)
 		for (auto it = si->robots.begin(); it != si->robots.end(); ++it)
 		{
 			bool en = true;
-			if (my.name == it->first || si->robot.name == it->first)
+
+			
+			if (it->second.fname == "16.dll" || it->second.fname == "14.dll" || it->second.fname == "01.dll" &&
+				it->second.fname == "07.dll" || si->robot.name == it->first)
 			{
 				en = false;
 				break;
@@ -177,5 +173,4 @@ void DoStep(Stepinfo* si)
 			si->curActions.targetName = enemy;
 		}
 	}
-
 }
